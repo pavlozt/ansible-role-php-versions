@@ -32,6 +32,7 @@ The PHP version to be installed. Any [currently-supported PHP major version](htt
     
       vars:
         php_version: '8.3'
+        php_sury_mirror: 'https://ftp.mpi-inf.mpg.de/mirrors/linux/mirror/deb.sury.org/repositories/php/'
     
       roles:
         - name: geerlingguy.repo-remi

@@ -23,14 +23,14 @@
 
 - name: Add Ondrej Sury's apt key (Debian).
   apt_key:
-    url: https://packages.sury.org/php/apt.gpg
+    url: "{{ php_sury_mirror }}apt.gpg"
     id: 15058500A0235D97F5D10063B188E2B695BD4743
     state: present
   when: ansible_distribution == "Debian"
 
-- name: Add Ondrej Sury's repo (Debian).
+- name: Add Ondrej Sury's repo mirror (Debian).
   apt_repository:
-    repo: "deb https://packages.sury.org/php/ {{ ansible_distribution_release }} main"
+    repo: "deb {{ php_sury_mirror }} {{ ansible_distribution_release }} main"
     state: present
   register: php_ondrej_debian_repo
   when: ansible_distribution == "Debian"

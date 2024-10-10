@@ -4,3 +4,6 @@ php_version: '8.3'
 
 # For Debian OSes only.
 php_versions_install_recommends: false
+
+# Sury PHP mirror
+php_sury_mirror: 'https://packages.sury.org/php/'
